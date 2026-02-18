@@ -64,7 +64,7 @@ export default function HomeEN() {
 
             <div className="hidden lg:flex items-center justify-center">
               <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/OSTZLMBzOpDHs4GY0kUCpT/sandbox/j0AWZdG7P3T2Q4gaYy0P8G-img-1_1771446850000_na1fn_aGVyby1wcm9kZW50aW0tdnMtcHJvdmFkZW50.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvT1NUWkxNQnpPcERIczRHWTBrVUNwVC9zYW5kYm94L2owQVdaZEc3UDNUMlE0Z2FZeTBQOEctaW1nLTFfMTc3MTQ0Njg1MDAwMF9uYTFmbl9hR1Z5Ynkxd2NtOWtaVzUwYVcwdGRuTXRjSEp2ZG1Ga1pXNTAucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=lL9hgNiFgpBBOb5XmXM8WFYkS-GFFJLjlL3s4pGzVMJBA258fCj-A8Yd4O9ZfOLPH-rj3TrMtolb73tuKkSY~AIpMAmOF4PdCDILlH~xAOSxwqP99-3dukKXSKShpk37j7fwFRa7ZT5XidV1N-l-ttd~hhSZGnYDwrVRPtt~IR1Hprc0OBCPtf77HrhnKwuvImbInuo1OJTeNkE1rCLVyIK1mv4t2geEBCtBxEduHoJvdO9vG4MCFnFpEPyLr6QVh~6sFsh2gQ4Qwzc-gZRZIgMEMX-XP9pAFGaXMlGjrn1b~zRD5zA4q2G3Arr6EvqE~NZrYrcCcJFDJHkGy1rUCg__"
+                src="https://files.manuscdn.com/canvas/images/2026/02/18/741cb688-324d-4184-9e5a-7ce0678672e4.jpg"
                 alt="ProDentim vs ProvaDent - Formula Comparison 2026"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
