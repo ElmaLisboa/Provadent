@@ -448,7 +448,7 @@ export default function HomeEN() {
                 style={{backgroundColor: '#464592'}}
                 onClick={() => window.open('https://6ce69dy9im9s8z4l4l60jatp5z.hop.clickbank.net', '_blank')}
               >
-                Consider ProvaDent
+                Visit ProvaDent Official Website
               </Button>
             </div>
           </div>
