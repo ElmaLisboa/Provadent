@@ -19,8 +19,8 @@ export default function HomeEN() {
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-b from-slate-50 to-white pt-16 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-8 order-2 lg:order-1">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                   ProDentim vs ProvaDent
@@ -62,11 +62,11 @@ export default function HomeEN() {
               </div>
             </div>
 
-            <div className="hidden lg:flex items-center justify-center">
+            <div className="flex items-center justify-center order-1 lg:order-2">
               <img
                 src="https://files.manuscdn.com/canvas/images/2026/02/18/741cb688-324d-4184-9e5a-7ce0678672e4.jpg"
                 alt="ProDentim vs ProvaDent - Formula Comparison 2026"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full max-w-sm h-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
