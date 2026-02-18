@@ -148,7 +148,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center lg:order-2">
               <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/OSTZLMBzOpDHs4GY0kUCpT/sandbox/cNJAJvA8WfLUdDl9CHEVTb-img-2_1771439870000_na1fn_cHJvZGVudGltLXByb2R1Y3QtaGVybw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80"
+                src="https://files.manuscdn.com/canvas/images/2026/02/18/2f7c44fb-6bce-4584-9a5a-7ca97b85bb50.png"
                 alt="ProDentim - Probioticos Orais Avancados"
                 className="w-full max-w-sm h-auto rounded-lg shadow-lg"
               />
@@ -223,7 +223,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/OSTZLMBzOpDHs4GY0kUCpT/sandbox/cNJAJvA8WfLUdDl9CHEVTb-img-3_1771439870000_na1fn_cHJvdmFkZW50LXByb2R1Y3QtaGVybw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80"
+                src="https://private-us-east-1.manuscdn.com/user_upload_by_module/feedback/310519663340322963/TnXluSRJxhxrWFzk.webp?Expires=1802978868&Signature=VWGhA9dd60ucj91ahGgak9wSneuc3k9UfgJiFA8uPB~8HiNo2rVu2POH1fL99HhGO8uNhPDM6vj-vc5dxADjhJFhqb5hzM~kjiVDdHs0djL7IxuSDkgcdoAoFJCnI0O4qn9qpui8~0EgvD9Hw8jmUfurQUnhg0rc6USs7I~026VZvLwjnI6mDSIKRZ-yqa1iX0ET7IZcAkv2XtMXHX5ct20DW4cjdXOIVrsrKDovWyFM1k~~WSPzISKMd1a4o-mgh5cTDCmmIM06TupbcWcOIwlx1aAV8USD4j7EvpCGs2UZf~ju8P61C8aPhYbBJhiPwW~8NpVRpI8t2PvvX5FIxg__&Key-Pair-Id=K2HSFNDJXOU9YS"
                 alt="ProvaDent - Formula Avancada de Saude Oral"
                 className="w-full max-w-sm h-auto rounded-lg shadow-lg"
               />
