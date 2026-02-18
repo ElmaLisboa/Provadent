@@ -160,7 +160,7 @@ export default function Home() {
                   <div className="bg-green-100 rounded-full p-3">
                     <TrendingUp className="w-6 h-6 text-green-700" />
                   </div>
-                  <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold text-sm">1o Lugar - Escolha do Editor</span>
+                  <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold text-sm">1º Lugar</span>
                 </div>
                 <h2 className="text-4xl font-bold text-slate-900 mb-4">ProDentim</h2>
                 <div className="flex items-center gap-3 mb-6">
