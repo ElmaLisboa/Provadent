@@ -27,7 +27,7 @@ export default function Home() {
                   <span className="text-blue-700"> Veja Esta Analise</span>
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed">
-                  Comparacao imparcial e detalhada dos dois suplementos dentais mais procurados.
+                  Comparação imparcial e detalhada dos dois suplementos dentais mais procurados.
                 </p>
               </div>
 
@@ -303,7 +303,7 @@ export default function Home() {
       <section id="comparison-table" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-slate-900 mb-12">
-            Comparacao Detalhada
+            Comparação Detalhada
           </h2>
 
           <div className="overflow-x-auto rounded-lg border border-slate-200 shadow-lg">
@@ -363,7 +363,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h3 className="text-3xl font-bold text-slate-900">Pronto para Comecar?</h3>
           <p className="text-lg text-slate-600">
-            Nao deixe para depois. Milhares de pessoas ja transformaram sua saude bucal com ProDentim.
+            Não deixe para depois. Milhares de pessoas já transformaram sua saúde bucal com ProDentim.
           </p>
           <Button
             size="lg"
