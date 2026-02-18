@@ -88,7 +88,7 @@ export default function Home() {
               <Card className="p-8 border-2 border-blue-700 bg-blue-50 shadow-lg">
                 <div className="pt-4">
                   <h3 className="text-2xl font-bold text-blue-900 mb-2">ProDentim</h3>
-                  <p className="text-slate-600 mb-4">Escolha do Editor</p>
+                  <p className="text-slate-600 mb-4">Escolha Popular</p>
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
