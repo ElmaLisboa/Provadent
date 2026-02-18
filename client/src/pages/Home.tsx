@@ -64,7 +64,7 @@ export default function Home() {
 
             <div className="hidden lg:flex items-center justify-center">
               <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/OSTZLMBzOpDHs4GY0kUCpT/sandbox/cNJAJvA8WfLUdDl9CHEVTb-img-1_1771439875000_na1fn_aGVyby1kZW50YWwtY29tcGFyaXNvbg.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80"
+                src="https://files.manuscdn.com/canvas/images/2026/02/18/ab1842ca-da01-4a17-9547-cbb9c6d78cfe.jpg"
                 alt="Comparacao de suplementos dentais"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
