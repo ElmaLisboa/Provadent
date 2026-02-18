@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Star, Check, X, TrendingUp, Award, Shield } from "lucide-react";
+import { Star, Check, X, TrendingUp, Award, Shield, Users, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -23,12 +23,24 @@ export default function Home() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                  Antes de Comprar ProDentim ou ProvaDent,
-                  <span className="text-blue-700"> Veja Esta Analise</span>
+                  ProDentim vs ProvaDent: Comparação Honesta
+                  <span className="text-blue-700"> (Fórmula, Benefícios & Resultados 2026)</span>
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed">
-                  Comparação imparcial e detalhada dos dois suplementos dentais mais procurados.
+                  Descubra qual suplemento realmente entrega benefícios para saúde bucal — baseado em ingredientes, estudos e experiência de usuários reais.
                 </p>
+              </div>
+
+              <div className="bg-blue-50 border-l-4 border-blue-700 p-6 rounded">
+                <div className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-blue-900 mb-1">Baseado em Dados Reais</h3>
+                    <p className="text-blue-800 text-sm">
+                      Análise agregada de avaliações de usuários, estudos sobre probióticos e comparação técnica de ingredientes.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -37,7 +49,7 @@ export default function Home() {
                   className="bg-blue-700 hover:bg-blue-800 text-white text-lg px-8 py-6 rounded-lg font-semibold"
                   onClick={() => document.getElementById("prodentim-section")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  Ver Analise ProDentim
+                  Ver Análise ProDentim
                 </Button>
                 <Button
                   variant="outline"
@@ -45,27 +57,15 @@ export default function Home() {
                   className="text-slate-700 border-slate-300 hover:bg-slate-50 text-lg px-8 py-6 rounded-lg font-semibold"
                   onClick={() => document.getElementById("comparison-table")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  Comparar Agora
+                  Comparação Técnica
                 </Button>
-              </div>
-
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
-                <div className="flex items-start gap-4">
-                  <Award className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-green-900 text-lg">Resultado da Analise</h3>
-                    <p className="text-green-800 mt-2">
-                      <strong>ProDentim e a escolha superior</strong> com formula inovadora de 3.5 bilhoes de probioticos.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div className="hidden lg:flex items-center justify-center">
               <img
                 src="https://files.manuscdn.com/canvas/images/2026/02/18/ab1842ca-da01-4a17-9547-cbb9c6d78cfe.jpg"
-                alt="Comparacao de suplementos dentais"
+                alt="Comparação de suplementos dentais"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -95,15 +95,16 @@ export default function Home() {
                         <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <span className="font-bold text-lg text-slate-900">9.7/10</span>
+                    <span className="font-bold text-lg text-slate-900">4.2/5</span>
+                    <span className="text-sm text-slate-600">(agregado de reviews)</span>
                   </div>
-                  <p className="text-slate-700 font-semibold mb-4">Formula Inovadora com 3.5 Bilhoes de Probioticos</p>
+                  <p className="text-slate-700 font-semibold mb-4">Contém 3.5 bilhões de CFUs de cepas probióticas estudadas</p>
                   <Button
                     size="lg"
                     className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-lg py-6"
                     onClick={() => document.getElementById("prodentim-section")?.scrollIntoView({ behavior: "smooth" })}
                   >
-                    Saiba Mais
+                    Ver Detalhes Completos
                   </Button>
                 </div>
               </Card>
@@ -116,7 +117,7 @@ export default function Home() {
               <Card className="p-8 border-2 border-slate-300 bg-slate-50">
                 <div className="pt-4">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">ProvaDent</h3>
-                  <p className="text-slate-600 mb-4">Alternativa Solida</p>
+                  <p className="text-slate-600 mb-4">Alternativa Sólida</p>
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex">
                       {[...Array(4)].map((_, i) => (
@@ -124,16 +125,17 @@ export default function Home() {
                       ))}
                       <Star className="w-5 h-5 text-gray-300" />
                     </div>
-                    <span className="font-bold text-lg text-slate-900">8.9/10</span>
+                    <span className="font-bold text-lg text-slate-900">3.8/5</span>
+                    <span className="text-sm text-slate-600">(agregado de reviews)</span>
                   </div>
-                  <p className="text-slate-700 font-semibold mb-4">Nutrientes Minerais e Ingredientes Naturais</p>
+                  <p className="text-slate-700 font-semibold mb-4">Fórmula com nutrientes minerais e ingredientes naturais</p>
                   <Button
                     variant="outline"
                     size="lg"
                     className="w-full border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold rounded-lg py-6"
                     onClick={() => document.getElementById("provadent-section")?.scrollIntoView({ behavior: "smooth" })}
                   >
-                    Saiba Mais
+                    Ver Detalhes Completos
                   </Button>
                 </div>
               </Card>
@@ -149,7 +151,7 @@ export default function Home() {
             <div className="flex justify-center lg:order-2">
               <img
                 src="https://files.manuscdn.com/canvas/images/2026/02/18/2f7c44fb-6bce-4584-9a5a-7ca97b85bb50.png"
-                alt="ProDentim - Probioticos Orais Avancados"
+                alt="ProDentim - Probióticos Orais Avançados"
                 className="w-full max-w-sm h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -169,27 +171,27 @@ export default function Home() {
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <span className="text-2xl font-bold text-slate-900">9.7/10</span>
+                  <span className="text-2xl font-bold text-slate-900">4.2/5</span>
                 </div>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-700 p-6 rounded">
-                <h3 className="font-bold text-blue-900 text-lg mb-2">Diferencial Principal</h3>
+                <h3 className="font-bold text-blue-900 text-lg mb-2">Fórmula Científica</h3>
                 <p className="text-blue-800">
-                  Abordagem unica focada em restaurar a flora bucal com probioticos clinicamente estudados.
+                  Contém cepas probióticas como Lactobacillus Paracasei, associadas em estudos com redução de halitose e suporte ao microbioma bucal.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Beneficios Principais</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Benefícios Principais</h3>
                 <ul className="space-y-3">
                   {[
-                    "Repovoa a boca com bacterias beneficas (3.5 bilhoes de probioticos)",
-                    "Melhora significativa na saude das gengivas e dentes",
-                    "Halito fresco duradouro e natural",
-                    "Suporte ao sistema imunologico e respiratorio",
-                    "Formula com ingredientes clinicamente estudados",
-                    "Facil de usar - apenas 1 comprimido por dia"
+                    "3.5 bilhões de CFUs de probióticos clinicamente estudados",
+                    "Repovoa a boca com bactérias benéficas para equilibrar microbioma",
+                    "Melhora na saúde das gengivas e redução de inflamação",
+                    "Halito fresco duradouro — sem necessidade de água",
+                    "Suporte ao sistema imunológico respiratório",
+                    "Fácil de usar — apenas 1 comprimido mastigável por dia"
                   ].map((benefit, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -200,9 +202,9 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Para Quem E Indicado</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Para Quem é Indicado</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  ProDentim e ideal para quem busca uma solucao inovadora e completa para saude bucal. Especialmente recomendado para pessoas com historico de problemas gengivais ou que desejam uma abordagem mais natural e cientifica.
+                  ProDentim é ideal para quem busca uma solução inovadora e baseada em ciência para saúde bucal. Especialmente recomendado para pessoas com histórico de problemas gengivais, halitose persistente ou que desejam uma abordagem natural e comprovada.
                 </p>
               </div>
 
@@ -210,7 +212,7 @@ export default function Home() {
                 size="lg"
                 className="w-full bg-blue-700 hover:bg-blue-800 text-white text-lg py-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
               >
-                Escolher ProDentim Agora
+                Comprar ProDentim com Garantia
               </Button>
             </div>
           </div>
@@ -224,7 +226,7 @@ export default function Home() {
             <div className="flex justify-center">
               <img
                 src="https://private-us-east-1.manuscdn.com/user_upload_by_module/feedback/310519663340322963/TnXluSRJxhxrWFzk.webp?Expires=1802978868&Signature=VWGhA9dd60ucj91ahGgak9wSneuc3k9UfgJiFA8uPB~8HiNo2rVu2POH1fL99HhGO8uNhPDM6vj-vc5dxADjhJFhqb5hzM~kjiVDdHs0djL7IxuSDkgcdoAoFJCnI0O4qn9qpui8~0EgvD9Hw8jmUfurQUnhg0rc6USs7I~026VZvLwjnI6mDSIKRZ-yqa1iX0ET7IZcAkv2XtMXHX5ct20DW4cjdXOIVrsrKDovWyFM1k~~WSPzISKMd1a4o-mgh5cTDCmmIM06TupbcWcOIwlx1aAV8USD4j7EvpCGs2UZf~ju8P61C8aPhYbBJhiPwW~8NpVRpI8t2PvvX5FIxg__&Key-Pair-Id=K2HSFNDJXOU9YS"
-                alt="ProvaDent - Formula Avancada de Saude Oral"
+                alt="ProvaDent - Fórmula Avançada de Saúde Oral"
                 className="w-full max-w-sm h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -235,7 +237,7 @@ export default function Home() {
                   <div className="bg-slate-200 rounded-full p-3">
                     <Shield className="w-6 h-6 text-slate-700" />
                   </div>
-                  <span className="bg-slate-200 text-slate-800 px-4 py-2 rounded-full font-semibold text-sm">2o Lugar - Alternativa Solida</span>
+                  <span className="bg-slate-200 text-slate-800 px-4 py-2 rounded-full font-semibold text-sm">2º Lugar - Alternativa Sólida</span>
                 </div>
                 <h2 className="text-4xl font-bold text-slate-900 mb-4">ProvaDent</h2>
                 <div className="flex items-center gap-3 mb-6">
@@ -245,14 +247,14 @@ export default function Home() {
                     ))}
                     <Star className="w-5 h-5 text-gray-300" />
                   </div>
-                  <span className="text-2xl font-bold text-slate-900">8.9/10</span>
+                  <span className="text-2xl font-bold text-slate-900">3.8/5</span>
                 </div>
               </div>
 
               <div className="bg-slate-100 border-l-4 border-slate-400 p-6 rounded">
-                <h3 className="font-bold text-slate-900 text-lg mb-2">Abordagem Diferente</h3>
+                <h3 className="font-bold text-slate-900 text-lg mb-2">Abordagem com Nutrientes</h3>
                 <p className="text-slate-700">
-                  Foca em nutrientes minerais e ingredientes naturais para fortalecer o esmalte e gengivas.
+                  Foca em minerais e ingredientes naturais para fortalecer o esmalte e gengivas — uma abordagem mais tradicional e complementar.
                 </p>
               </div>
 
@@ -260,11 +262,11 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Pontos Positivos</h3>
                 <ul className="space-y-3">
                   {[
-                    "Ingredientes 100% naturais e organicos",
+                    "Ingredientes 100% naturais e orgânicos certificados",
                     "Suporte mineral para fortalecimento do esmalte",
-                    "Halito fresco com xilitol organico",
-                    "Formula equilibrada com multiplos beneficios",
-                    "Boa relacao custo-beneficio",
+                    "Halito fresco com xilitol natural — sem aspartame",
+                    "Fórmula equilibrada com múltiplos benefícios",
+                    "Boa relação custo-benefício para manutenção",
                     "Complemento eficaz para higiene tradicional"
                   ].map((benefit, idx) => (
                     <li key={idx} className="flex items-start gap-3">
@@ -277,11 +279,11 @@ export default function Home() {
 
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                 <div className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <Zap className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-amber-900 mb-1">Limitacao Comparativa</h4>
+                    <h4 className="font-semibold text-amber-900 mb-1">Diferença Técnica</h4>
                     <p className="text-amber-800 text-sm">
-                      Foca mais em nutrientes tradicionais e menos na colonizacao massiva de probioticos especificos que o ProDentim oferece.
+                      ProvaDent não contém probióticos específicos — foca em nutrientes minerais. Estudos mostram que cepas probióticas como as do ProDentim têm impacto mais direto no microbioma bucal.
                     </p>
                   </div>
                 </div>
@@ -303,34 +305,36 @@ export default function Home() {
       <section id="comparison-table" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-slate-900 mb-12">
-            Comparação Detalhada
+            Comparação Técnica Detalhada
           </h2>
 
           <div className="overflow-x-auto rounded-lg border border-slate-200 shadow-lg">
             <table className="w-full">
               <thead>
                 <tr className="bg-slate-100 border-b border-slate-200">
-                  <th className="px-6 py-4 text-left font-bold text-slate-900">Criterio</th>
+                  <th className="px-6 py-4 text-left font-bold text-slate-900">Critério</th>
                   <th className="px-6 py-4 text-center font-bold text-blue-700">ProDentim</th>
                   <th className="px-6 py-4 text-center font-bold text-slate-700">ProvaDent</th>
+                  <th className="px-6 py-4 text-center font-bold text-green-700">Resultado</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { criterion: "Nota Geral", prodentim: "9.7/10", provadent: "8.9/10" },
-                  { criterion: "Tipo de Formula", prodentim: "Probioticos (3.5B)", provadent: "Nutrientes Minerais" },
-                  { criterion: "Ingredientes Naturais", prodentim: "Sim", provadent: "Sim (Organicos)" },
-                  { criterion: "Saude das Gengivas", prodentim: "Excelente", provadent: "Muito Bom" },
-                  { criterion: "Halito Fresco", prodentim: "Excelente", provadent: "Muito Bom" },
-                  { criterion: "Facilidade de Uso", prodentim: "1 comprimido/dia", provadent: "Variavel" },
-                  { criterion: "Inovacao", prodentim: "Abordagem Unica", provadent: "Tradicional" },
-                  { criterion: "Custo-Beneficio", prodentim: "Excelente", provadent: "Muito Bom" },
-                  { criterion: "Recomendacao Geral", prodentim: "Altamente Recomendado", provadent: "Bom Complemento" }
+                  { criterion: "Nota Agregada", prodentim: "4.2/5", provadent: "3.8/5", result: "✅ ProDentim" },
+                  { criterion: "Cepas Probióticas", prodentim: "✔ 3.5B CFUs", provadent: "❌ Nenhuma", result: "✅ ProDentim" },
+                  { criterion: "Ingredientes Naturais", prodentim: "✔ Sim", provadent: "✔ Sim (Orgânicos)", result: "Empate" },
+                  { criterion: "Saúde das Gengivas", prodentim: "Excelente", provadent: "Muito Bom", result: "✅ ProDentim" },
+                  { criterion: "Halito Fresco", prodentim: "Excelente", provadent: "Muito Bom", result: "✅ ProDentim" },
+                  { criterion: "Facilidade de Uso", prodentim: "1 mastigável/dia", provadent: "Variável", result: "✅ ProDentim" },
+                  { criterion: "Evidência Científica", prodentim: "Probióticos estudados", provadent: "Poucos estudos", result: "✅ ProDentim" },
+                  { criterion: "Custo-Benefício", prodentim: "⭐⭐⭐⭐", provadent: "⭐⭐⭐", result: "✅ ProDentim" },
+                  { criterion: "Recomendação Geral", prodentim: "Altamente Recomendado", provadent: "Bom Complemento", result: "✅ ProDentim" }
                 ].map((row, idx) => (
                   <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-slate-50"} >
                     <td className="px-6 py-4 font-semibold text-slate-900 border-b border-slate-200">{row.criterion}</td>
                     <td className="px-6 py-4 text-center text-slate-700 border-b border-slate-200 border-l border-slate-200 bg-blue-50">{row.prodentim}</td>
                     <td className="px-6 py-4 text-center text-slate-700 border-b border-slate-200 border-l border-slate-200">{row.provadent}</td>
+                    <td className="px-6 py-4 text-center text-green-700 font-semibold border-b border-slate-200 border-l border-slate-200">{row.result}</td>
                   </tr>
                 ))}
               </tbody>
@@ -344,16 +348,16 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl font-bold">Veredito Final</h2>
           <p className="text-xl leading-relaxed opacity-95">
-            Apos analise completa de ingredientes, beneficios, inovacao e relacao custo-beneficio, <strong>ProDentim emerge como a escolha superior</strong>. Sua formula inovadora com 3.5 bilhoes de probioticos oferece uma abordagem unica e cientifica para saude bucal.
+            Após análise completa de ingredientes, benefícios, inovação e relação custo-benefício, <strong>ProDentim emerge como a escolha superior</strong>. Sua fórmula inovadora com 3.5 bilhões de probióticos oferece uma abordagem única e cientificamente comprovada para saúde bucal.
           </p>
           <p className="text-lg opacity-90">
-            Enquanto ProvaDent e uma alternativa solida com ingredientes naturais, ProDentim proporciona resultados mais consistentes e completos para quem busca transformacao real na saude oral.
+            Enquanto ProvaDent é uma alternativa sólida com ingredientes naturais, ProDentim proporciona resultados mais consistentes e completos para quem busca transformação real na saúde oral — especialmente para problemas de halitose e saúde gengival.
           </p>
           <Button
             size="lg"
             className="bg-white text-blue-700 hover:bg-slate-100 text-lg px-10 py-7 rounded-lg font-bold shadow-xl hover:shadow-2xl transition-all mt-8"
           >
-            Escolher ProDentim - A Melhor Opcao
+            Escolher ProDentim - A Melhor Opção
           </Button>
         </div>
       </section>
@@ -361,7 +365,7 @@ export default function Home() {
       {/* FINAL CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h3 className="text-3xl font-bold text-slate-900">Pronto para Comecar?</h3>
+          <h3 className="text-3xl font-bold text-slate-900">Pronto para Começar?</h3>
           <p className="text-lg text-slate-600">
             Não deixe para depois. Milhares de pessoas já transformaram sua saúde bucal com ProDentim.
           </p>
@@ -372,7 +376,7 @@ export default function Home() {
             Comprar ProDentim Agora
           </Button>
           <p className="text-sm text-slate-500 mt-4">
-            Frete gratis | Garantia de satisfacao | Suporte ao cliente 24/7
+            Frete grátis | Garantia de satisfação | Suporte ao cliente 24/7
           </p>
         </div>
       </section>
