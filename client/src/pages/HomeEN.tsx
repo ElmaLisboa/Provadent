@@ -445,7 +445,7 @@ export default function HomeEN() {
               <Button
                 size="lg"
                 className="w-full text-white text-base sm:text-lg py-4 sm:py-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
-                style={{backgroundColor: '#4a4896'}}
+                style={{backgroundColor: '#464592'}}
                 onClick={() => window.open('https://6ce69dy9im9s8z4l4l60jatp5z.hop.clickbank.net', '_blank')}
               >
                 Consider ProvaDent
