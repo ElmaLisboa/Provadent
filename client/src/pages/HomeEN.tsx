@@ -442,17 +442,7 @@ export default function HomeEN() {
 
               {/* TESTIMONIALS */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-slate-900">What Real Users Say</h3>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => setEditMode(!editMode)}
-                    className="text-xs"
-                  >
-                    {editMode ? 'Done Editing' : 'Edit'}
-                  </Button>
-                </div>
+                <h3 className="text-lg font-bold text-slate-900">What Real Users Say</h3>
                 <div className="bg-white p-4 rounded-lg border border-slate-200">
                   <div className="flex items-start gap-3">
                     <img src="https://private-us-east-1.manuscdn.com/user_upload_by_module/feedback/310519663340322963/fdRFcvELyQBBwvsR.webp?Expires=1802999576&Signature=oAKinSWdkijlwguq9xEFi60x-fVi52Tjpm5gDSIZCNmbqurmPwFRTKh9rk8YXZo0~BLkuy26HB6LySGdchHPq268GMd64RqqGWRc0g1qx~1pdzDuUo5WGoDq7Lwz0ngDRLTCqWl30R7PMIdT1QuHIKJhv7z17iCvsV12gUL8~pZYSSfd8rFaGJ3aETaIB8BBi0IV-u6bV6TYtGilhOoQ3V6SYWdmnabb1~cbl45QImINSS1Mzvu9zF8ajFrgGKzShML6T2FpOt20Q64CoiAmhECYsl51vxrIkxtqY3iBwYWePSWcjDny0mcdmyMoGD~PVM9QSg8G5uN2Ccv38A6Akg__&Key-Pair-Id=K2HSFNDJXOU9YS" alt="Kelly T" className="w-10 h-10 rounded-full flex-shrink-0" />
