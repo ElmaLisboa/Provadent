@@ -5,6 +5,35 @@ import { useState, useEffect } from "react";
 
 export default function HomeEN() {
   const [scrolled, setScrolled] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [testimonials, setTestimonials] = useState({
+    prodentim1: {
+      text: "Improved my bad breath in 3 weeks. My dentist was surprised by the improvement in my gums.",
+      name: "John, 45 years old"
+    },
+    prodentim2: {
+      text: "Easy to chew, felt the difference right away. I recommend it to anyone looking for something practical and effective.",
+      name: "Maria, 38 years old"
+    },
+    provadent1: {
+      text: "My dentist was surprised by the health of my gums. I highly recommend it!",
+      name: "Kelly T"
+    },
+    provadent2: {
+      text: "No more morning bad breath. Easy to use and natural ingredients give me peace of mind.",
+      name: "Ethan C"
+    }
+  });
+
+  const handleTestimonialChange = (key: string, field: string, value: string) => {
+    setTestimonials(prev => ({
+      ...prev,
+      [key as keyof typeof testimonials]: {
+        ...prev[key as keyof typeof testimonials],
+        [field]: value
+      }
+    }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -413,13 +442,42 @@ export default function HomeEN() {
 
               {/* TESTIMONIALS */}
               <div className="space-y-4">
-                <h3 className="text-lg font-bold text-slate-900">What Real Users Say</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-bold text-slate-900">What Real Users Say</h3>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => setEditMode(!editMode)}
+                    className="text-xs"
+                  >
+                    {editMode ? 'Done Editing' : 'Edit'}
+                  </Button>
+                </div>
                 <div className="bg-white p-4 rounded-lg border border-slate-200">
                   <div className="flex items-start gap-3">
                     <img src="https://private-us-east-1.manuscdn.com/user_upload_by_module/feedback/310519663340322963/fdRFcvELyQBBwvsR.webp?Expires=1802999576&Signature=oAKinSWdkijlwguq9xEFi60x-fVi52Tjpm5gDSIZCNmbqurmPwFRTKh9rk8YXZo0~BLkuy26HB6LySGdchHPq268GMd64RqqGWRc0g1qx~1pdzDuUo5WGoDq7Lwz0ngDRLTCqWl30R7PMIdT1QuHIKJhv7z17iCvsV12gUL8~pZYSSfd8rFaGJ3aETaIB8BBi0IV-u6bV6TYtGilhOoQ3V6SYWdmnabb1~cbl45QImINSS1Mzvu9zF8ajFrgGKzShML6T2FpOt20Q64CoiAmhECYsl51vxrIkxtqY3iBwYWePSWcjDny0mcdmyMoGD~PVM9QSg8G5uN2Ccv38A6Akg__&Key-Pair-Id=K2HSFNDJXOU9YS" alt="Kelly T" className="w-10 h-10 rounded-full flex-shrink-0" />
-                    <div>
-                      <p className="text-slate-700 italic mb-2">"My dentist was surprised by the health of my gums. I highly recommend it!"</p>
-                      <p className="font-semibold text-slate-900">Kelly T</p>
+                    <div className="w-full">
+                      {editMode ? (
+                        <>
+                          <textarea
+                            value={testimonials.provadent1.text}
+                            onChange={(e) => handleTestimonialChange('provadent1', 'text', e.target.value)}
+                            className="w-full p-2 border border-slate-300 rounded mb-2 text-slate-700 italic text-sm"
+                            rows={2}
+                          />
+                          <input
+                            type="text"
+                            value={testimonials.provadent1.name}
+                            onChange={(e) => handleTestimonialChange('provadent1', 'name', e.target.value)}
+                            className="w-full p-2 border border-slate-300 rounded text-slate-900 font-semibold text-sm"
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <p className="text-slate-700 italic mb-2">"{testimonials.provadent1.text}"</p>
+                          <p className="font-semibold text-slate-900">{testimonials.provadent1.name}</p>
+                        </>
+                      )}
                       <p className="text-sm text-slate-600">Verified Purchase</p>
                     </div>
                   </div>
@@ -427,9 +485,28 @@ export default function HomeEN() {
                 <div className="bg-white p-4 rounded-lg border border-slate-200">
                   <div className="flex items-start gap-3">
                     <img src="https://private-us-east-1.manuscdn.com/user_upload_by_module/feedback/310519663340322963/hFWAnrroBOYtXmJt.webp?Expires=1802999588&Signature=o8ViFAXOwOAU096f9FueZho1Js7fYGCv8wc31ch8so72s-vbCPvLgUxa7bambwO3o~a8Vrh6X78xA2Fn0hdLnVQD64gx36FZX-f0KpuytqamKKbkYSu39ndlxKuhFQCMxt65NUEJSRvHqDT-~rGKU0RgtE44dUFLgCkTvjdMSELXNGW8O~zI7kgLOYNBPxJzNprgqm3Fj19ma4KZwiP0q3qArP0kRFFrGb8Gj8vN4o7xEGboFIHeWT9d929FPXxFJF2ZQwtX8Ydb2EQ3m4xX01tXAofruE9YoWLd4pb~p0JfIx8ATbVMISJgsu6abUhBRdaDQs-F9y-MStytv8NRFQ__&Key-Pair-Id=K2HSFNDJXOU9YS" alt="Ethan C" className="w-10 h-10 rounded-full flex-shrink-0" />
-                    <div>
-                      <p className="text-slate-700 italic mb-2">"No more morning bad breath. Easy to use and natural ingredients give me peace of mind."</p>
-                      <p className="font-semibold text-slate-900">Ethan C</p>
+                    <div className="w-full">
+                      {editMode ? (
+                        <>
+                          <textarea
+                            value={testimonials.provadent2.text}
+                            onChange={(e) => handleTestimonialChange('provadent2', 'text', e.target.value)}
+                            className="w-full p-2 border border-slate-300 rounded mb-2 text-slate-700 italic text-sm"
+                            rows={2}
+                          />
+                          <input
+                            type="text"
+                            value={testimonials.provadent2.name}
+                            onChange={(e) => handleTestimonialChange('provadent2', 'name', e.target.value)}
+                            className="w-full p-2 border border-slate-300 rounded text-slate-900 font-semibold text-sm"
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <p className="text-slate-700 italic mb-2">"{testimonials.provadent2.text}"</p>
+                          <p className="font-semibold text-slate-900">{testimonials.provadent2.name}</p>
+                        </>
+                      )}
                       <p className="text-sm text-slate-600">Verified Purchase</p>
                     </div>
                   </div>
