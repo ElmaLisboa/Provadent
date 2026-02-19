@@ -326,7 +326,7 @@ export default function HomeEN() {
                 <h3 className="text-lg font-bold text-slate-900">What Real Users Say</h3>
                 <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
                   <div className="flex items-start gap-3">
-                    <Quote className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="John" className="w-10 h-10 rounded-full flex-shrink-0" />
                     <div>
                       <p className="text-slate-700 italic mb-2">"Improved my bad breath in 3 weeks. My dentist was surprised by the improvement in my gums."</p>
                       <p className="font-semibold text-slate-900">John, 45 years old</p>
@@ -336,7 +336,7 @@ export default function HomeEN() {
                 </div>
                 <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
                   <div className="flex items-start gap-3">
-                    <Quote className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maria" alt="Maria" className="w-10 h-10 rounded-full flex-shrink-0" />
                     <div>
                       <p className="text-slate-700 italic mb-2">"Easy to chew, felt the difference right away. I recommend it to anyone looking for something practical and effective."</p>
                       <p className="font-semibold text-slate-900">Maria, 38 years old</p>
