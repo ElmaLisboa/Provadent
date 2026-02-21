@@ -3,6 +3,16 @@ import { Card } from "@/components/ui/card";
 import { Star, Check, X, TrendingUp, Award, Shield, Users, Zap, Quote } from "lucide-react";
 import { useState, useEffect } from "react";
 
+// Google Analytics event tracking
+const trackConversion = (eventName: string, product: string) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, {
+      'product': product,
+      'timestamp': new Date().toISOString()
+    });
+  }
+};
+
 export default function HomeEN() {
   const [scrolled, setScrolled] = useState(false);
   const [editMode, setEditMode] = useState(false);
@@ -33,6 +43,16 @@ export default function HomeEN() {
         [field]: value
       }
     }));
+  };
+
+  const handleProdentimClick = () => {
+    trackConversion('purchase_click', 'ProDentim');
+    window.open('https://prodentim.com/text.php?&shield=9f5cb4nabq9oezck0ih80luh8m', '_blank');
+  };
+
+  const handleProvadentClick = () => {
+    trackConversion('purchase_click', 'ProvaDent');
+    window.open('https://6ce69dy9im9s8z4l4l60jatp5z.hop.clickbank.net', '_blank');
   };
 
   useEffect(() => {
